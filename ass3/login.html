@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Back to Home link -->
+        <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+
+        <div class="auth-box">
+            <div class="auth-header">
+                <button id="show-login" class="tab active">Login</button>
+                <button id="show-signup" class="tab">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active-form">
+                <h2>Welcome Back</h2>
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p id="login-message" class="message"></p>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="auth-form">
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                    <small class="password-hint">Must contain at least 1 letter, 1 digit, and 1 symbol. No spaces or
+                        other characters allowed.</small>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p id="signup-message" class="message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
