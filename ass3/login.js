@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. At least 1 symbol check (!@#$%^&* etc.)
     // 4. No other characters allowed (i.e., only alphabets, digits, and allowed symbols. No spaces, no unicode, etc.)
     const validatePassword = (password) => {
-        // Enforce minimum length of 6 characters for a decent password (not strictly requested but standard)
+        // Enforce minimum length of 8 characters
         // Checks positive lookaheads for letters, numbers, and symbols.
         // Finally, ensures the entire string matches only letters, numbers, and symbols.
-        const strictRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`])[a-zA-Z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]+$/;
+        const strictRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`])[a-zA-Z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]{8,}$/;
 
         return strictRegex.test(password);
     };
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageEl = document.getElementById('signup-message');
 
         if (!validatePassword(password)) {
-            messageEl.textContent = 'Invalid Password. Must contain at least 1 letter, 1 digit, and 1 symbol. No spaces or other characters allowed.';
+            messageEl.textContent = 'Invalid Password. Must be at least 8 chars and contain 1 letter, 1 digit, and 1 symbol. No spaces or other characters allowed.';
             messageEl.className = 'message error';
             return;
         }
