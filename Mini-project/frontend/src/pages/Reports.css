@@ -1,0 +1,44 @@
+.reports {
+  animation: fadeIn 0.4s ease;
+}
+
+.summary-icon-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-icon-sm.green {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.summary-icon-sm.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.summary-icon-sm.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.summary-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.green-text {
+  color: #059669;
+}
+
+.red-text {
+  color: #dc2626;
+}
